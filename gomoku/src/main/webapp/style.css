@@ -1,0 +1,145 @@
+*{
+	box-sizing: border-box;
+}
+
+body {
+	margin: 0;
+	padding: 0; 
+	text-align: center;
+	background-image: linear-gradient(to left, #fdfcfb 0%, #e2d1c3 100%);
+}
+
+.wrapper{
+	display: flex;
+	justify-content: center;
+	align-items: center
+}
+
+#pan {
+	background: #e3c18e;
+	padding: 60px;
+	display: flex;
+	flex-direction: column;
+	cursor: pointer;
+	border-radius: 0.5rem;
+}
+
+.line {
+	display: flex;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+}
+
+.line:first-child {
+	border-top: 1px solid black;
+}
+.line:last-child {
+	border-bottom: 1px solid black;
+}
+
+.kan {
+	width: 40px;
+	height: 40px;
+	border: 1px solid black;
+	position: relative;
+}
+
+.dot {
+	width: 8px;
+	height: 8px;
+	border-radius: 100%;
+	position: absolute;
+	background-color: black;
+	bottom: 0;
+	right: 0;
+	transform: translate(calc(50% + 1px), calc(50% + 1px));
+}
+
+.al:after {
+	content: "";
+	position: absolute;
+	width: 38px;
+	height: 38px;
+	border-radius: 100%;
+	z-index: 999;
+}
+
+.real-al {
+	content: "";
+	position: absolute;
+	width: 38px;
+	height: 38px;
+	border-radius: 100%;
+	z-index: 1099;
+}
+
+.real-al-black {
+	background-color: black;
+}
+
+.real-al-white {
+	background-color: #f3f6f6;
+}
+
+.al-black:after {
+	background-color: black;
+}
+.al-white:after {
+	background-color: #f3f6f6;
+}
+
+.al-transparent:after {
+	opacity: 0.7;
+}
+
+.al0-0:after {
+	top: 0;
+	left: 0;
+	transform: translate(calc(-50% - 1px), calc(-50% - 2px));
+}
+.al100-0:after {
+	top: 100%;
+	left: 0;
+	transform: translate(calc(-50% - 1px), calc(-50%));
+}
+.al100-100:after {
+	top: 100%;
+	left: 100%;
+	transform: translate(calc(-50% + 1px), calc(-50%));
+}
+.al0-100:after {
+	top: 0;
+	left: 100%;
+	transform: translate(calc(-50% + 1px), calc(-50% - 2px));
+}
+
+.real-al0-0 {
+	top: 0;
+	left: 0;
+	transform: translate(calc(-50% - 1px), calc(-50% - 2px));
+}
+.real-al100-0 {
+	top: 100%;
+	left: 0;
+	transform: translate(calc(-50% - 1px), calc(-50%));
+}
+.real-al100-100 {
+	top: 100%;
+	left: 100%;
+	transform: translate(calc(-50% + 1px), calc(-50%));
+}
+.real-al0-100 {
+	top: 0;
+	left: 100%;
+	transform: translate(calc(-50% + 1px), calc(-50% - 2px));
+}
+.link {
+	padding: 0.5rem;
+}
+a {
+	text-decoration: none;
+	color: rgba(255,255,255,0.7);
+}
+a:hover {
+	color: #ccc0b6
+}
